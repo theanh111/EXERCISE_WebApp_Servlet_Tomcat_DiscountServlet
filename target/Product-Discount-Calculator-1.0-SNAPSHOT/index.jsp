@@ -12,8 +12,10 @@
     <title>Ứng dụng Product Discount Calculator</title>
 </head>
 <body>
-<form method="post" action="/calculate">
+<form method="get" action="/calculate">
     <h1>Product Discount Calculator</h1>
+    <h2>== C0720I1 ==</h2>
+    <hr>
     <input type="text" name="desc" placeholder="Description"/>
     <br>
     <br>

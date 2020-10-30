@@ -9,6 +9,10 @@ import java.io.PrintWriter;
 @WebServlet(name = "CalculateDiscountServlet", urlPatterns = "/calculate")
 public class CalculateDiscountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String desc = request.getParameter("desc");
         float price = Float.parseFloat(request.getParameter("price"));
         float discountPercent = Float.parseFloat(request.getParameter("percent"));
@@ -23,9 +27,5 @@ public class CalculateDiscountServlet extends HttpServlet {
         writer.println("<h2> - Before Price: " + price + "</h1>");
         writer.println("<h2> - Discount Price: " + discountPrice + "</h1>");
         writer.println("</html>");
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }
